@@ -10,15 +10,28 @@
  * @author    Yoheved Tirtsa Touati
  * @author    Beth Sefer
  */
-?>
 
-<h2>Valider les fiches de frais</h2>
-<div class="row">
-    <div class="col-md-4"><?php //col-md-4 prend 1/4 de la page ?>
+$uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);//Verifie le contenu de uc
+if ($uc=='validerFrais'){   
+?>
+    <h2>Valider les fiches de frais</h2>
+    <div class="row">
+        <div class="col-md-4"><?php //col-md-4 prend 1/4 de la page ?>
+
+            <form action="index.php?uc=validerFrais&action=afficheFrais" 
+                  method="post" role="form">
+<?php
+}else{
+?> 
+    <h2>Suivre le paiement des fiches de frais</h2>
+    <div class="row">
+        <div class="col-md-4"><?php //col-md-4 prend 1/4 de la page ?>
       
-        <form action="index.php?uc=validerFrais&action=afficheFrais" 
-              method="post" role="form">
-            
+            <form action="index.php?uc=suivreFrais&action=afficheFrais" 
+                method="post" role="form">
+<?php
+}
+?>           
              <?php //liste deroulante du visiteur ?>
               <div class="form-group">
                 <label for="lstVisiteurs" accesskey="n">Choisir le visiteur : </label>

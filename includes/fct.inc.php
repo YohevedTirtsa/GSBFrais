@@ -268,6 +268,27 @@ function estComptableConnecte()
    
 }
 /**
+ * recupere le mois suivant
+ * @param type $mois
+ * @return type
+ */
+function getMoisSuivant($mois){
+   $numAnnee = substr($mois, 0, 4);// permet de recuperer les 4 premiers caracteres
+   $numMois = substr($mois, 4, 2);// permet de recuperer a partir du 4eme caractere, les 2 premiers
+   if($numMois=='12'){
+        $numMois='01';
+        $numAnnee++;
+       
+   }else{
+        $numMois ++;
+   }
+   if (strlen($numMois) == 1) { //verifie le nombre de caractere dans le mois
+        $numMois = '0' . $numMois;
+   }
+   return $numAnnee.$numMois;
+   
+}
+/**
  * recupere le mois precedent
  * @param type $mois
  * @return type
@@ -281,6 +302,9 @@ function getMoisPrecedent($mois){
        
    }else{
         $numMois --;
+   }
+   if (strlen($numMois) == 1) { //verifie le nombre de caractere dans le mois
+        $numMois = '0' . $numMois;
    }
    return $numAnnee.$numMois;
    
@@ -296,11 +320,14 @@ function getLesMois($mois){
             $numMois = '0' . $numMois;
         }
         $lesMois[] = array(
-                'mois' => $mois,
+                'mois' => $numAnnee.$numMois,
                 'numAnnee' => $numAnnee,
                 'numMois'=> $numMois
             );  
     }
     return($lesMois);
+    
+}
+function zero(){
     
 }

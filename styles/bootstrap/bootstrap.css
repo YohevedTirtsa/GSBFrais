@@ -259,6 +259,7 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
+  
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -2315,6 +2316,7 @@ th {
 .table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
 }
+
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
@@ -2566,6 +2568,7 @@ output {
        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -4123,7 +4126,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills-c > li.active > a,
 .nav-pills-c > li.active > a:hover,
 .nav-pills-c > li.active > a:focus {
- color: #fff;
+ color:#fff !important;
  background-color: #ff6f02;
 }
 .nav-stacked > li {
@@ -5732,6 +5735,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-primary-c {
   border-color: #ff6f02;
+  border-top-width: 3px;
 }
 .panel-primary {
   border-color: #337ab7;
@@ -5779,9 +5783,20 @@ button.list-group-item-danger.active:focus {
 .panel-info {
   border-color: #bce8f1;
 }
+.panel-info1 {
+  border-color: #ff6f02;
+}
+.panel-info-c {
+  border-color: #f06e1d;
+}
 .panel-info > .panel-heading {
   color: #31708f;
-  background-color: #d9edf7;
+  background-color:  #d9edf7;
+  border-color: #bce8f1;
+}
+.panel-info1 > .panel-heading {
+  color: #31708f;
+  background-color: #ff6f02;
   border-color: #bce8f1;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {

@@ -82,19 +82,19 @@
                   <div class="col-md-8">
                       <ul class="nav nav-pills-c pull-right" role="tablist">
                           <li <?php if (!$uc || $uc == 'accueil') { ?>class="active" <?php } ?>>
-                              <a  style="color: orange" href="index.php">
+                              <a  style="color: orange; "  href="index.php">
                                   <span class="glyphicon glyphicon-home"></span>
                                   Accueil
                               </a>
                           </li>
                           <li <?php if ($uc == 'validerFrais') { ?>class="active"<?php } ?>>
                               <a  style="color: orange" href="index.php?uc=validerFrais&action=selectionnerVetM">
-                                  <span class="glyphicon glyphicon-pencil"></span>
+                                  <span class="glyphicon glyphicon-ok"></span>
                                   Valider les fiches de frais
                               </a>
                           </li>
-                          <li <?php if ($uc == 'etatFrais') { ?>class="active"<?php } ?>>
-                              <a  style="color: orange" href="index.php?uc=etatFrais&action=selectionnerMois">
+                          <li <?php if ($uc == 'suivreFrais') { ?>class="active"<?php } ?>>
+                              <a  style="color: orange" href="index.php?uc=suivreFrais&action=selectionnerVetM">
                                   <span class="glyphicon glyphicon-euro"></span>
                                   Suivre le paiement des fiches de frais
                               </a>

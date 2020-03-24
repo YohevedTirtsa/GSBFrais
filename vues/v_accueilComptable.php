@@ -32,9 +32,9 @@
                     <div class="col-xs-12 col-md-12">
                         <a href="index.php?uc=validerFrais&action=selectionnerVetM"
                            class="btn btn-success btn-lg" role="button">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-ok"></span>
                             <br>Valider la fiche de frais</a>
-                        <a href="index.php?uc=etatFrais&action=selectionnerMois"
+                        <a href="index.php?uc=suivreFrais&action=selectionnerVetM"
                            class="btn btn-primary-c btn-lg" role="button">
                             <span class="glyphicon glyphicon-euro"></span>
                             <br>Suivre le paiement des fiches de frais</a>

@@ -18,6 +18,7 @@ $estConnecte = estConnecte();
 $estVisiteurConnecte= estVisiteurConnecte();
 $estComptableConnecte= estComptableConnecte();
 require 'vues/v_entete.php';//requis
+
 $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);//on verifie le contenu de uc
 if ($uc && !$estConnecte) {
     $uc = 'connexion';
@@ -42,5 +43,9 @@ case 'deconnexion':
     break;
 case 'validerFrais':
     include 'controleurs/c_validerFrais.php';
+    break;
+case 'suivreFrais':
+    include 'controleurs/c_suivrePaiement.php';
+    break;
 }
 require 'vues/v_pied.php';
